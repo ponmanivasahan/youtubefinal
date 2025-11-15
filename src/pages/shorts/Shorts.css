@@ -1,0 +1,73 @@
+.shorts-page {
+  background-color: #000;
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  
+}
+.shorts-video-card {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: start;
+  position: relative;
+  background-color: #000;
+}
+.shorts-video {
+  height: 90vh;
+  aspect-ratio: 9 / 16;
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+.shorts-overlay {
+  position: absolute;
+  bottom: 60px;
+  left: 40px;
+  color: #fff;
+  text-shadow: 0 0 8px rgba(0,0,0,0.8);
+}
+.shorts-overlay h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+.shorts-overlay p {
+  font-size: 15px;
+  color: #ddd;
+}
+.back-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background-color: rgba(255, 0, 0, 0.85);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 8px 16px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+  z-index: 100;
+}
+.back-btn:hover {
+  background-color: #cc0000;
+  transform: scale(1.05);
+}
+.shorts-page::-webkit-scrollbar {
+  display: none;
+}
+.footer{
+  position: absolute;
+  bottom: 100px;
+  right: 100px;
+}
+.short-info{
+  width: 300px;
+  height: 0vh;
+}
