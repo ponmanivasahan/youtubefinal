@@ -29,6 +29,11 @@
 .sidebar p:hover {
   background-color: hsl(0, 14%, 1%);
 }
+
+.Youtube{
+  color: #cc0000;
+}
+
 .content {
   flex: 1;
   margin-left: 240px;

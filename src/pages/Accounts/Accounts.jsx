@@ -12,8 +12,6 @@ function Accounts() {
       alert("Please enter a valid email");
       return;
     }
-
-    // Save email to localStorage
     localStorage.setItem("userEmail", email);
 
     navigate("/identity");

@@ -10,32 +10,37 @@ function Login() {
   const [signInPassword, setSignInPassword] = useState("");
   const [signUpName, setSignUpName] = useState("");
   const [signUpPassword, setSignUpPassword] = useState("");
+
   const navigate = useNavigate();
+
 
   const handleSignIn = () => {
     if (!signInName || !signInPassword) {
       alert("Please enter valid login details");
       return;
     }
-    alert("Login Successful!");
-    
-    navigate("/home", { state: { username: signInName } }); // SEND USERNAME
-    setShowSignIn(false);
-  };
 
+    alert("Login Successful!");
+    setTimeout(() => {
+      setShowSignIn(false);
+      navigate("/account", { state: { username: signInName } });
+    }, 3000);
+  };
   const handleSignUp = () => {
     if (!signUpName || !signUpPassword) {
       alert("Please fill all details for signup");
       return;
     }
-    alert("Signup Successful!");
 
-    navigate("/home", { state: { username: signUpName } }); // SEND USERNAME
-    setShowSignUp(false);
+    alert("Signup Successful!");
+    setTimeout(() => {
+      setShowSignUp(false);
+      navigate("/home", { state: { username: signUpName } });
+    }, 1000);
   };
 
   return (
-    < div className='maindiv'>
+    <div className='maindiv'>
       <h3 className='sprak'>SPARK YOUR CREATIVITY ON YOUTUBE</h3>
 
       <div>
@@ -57,12 +62,14 @@ function Login() {
             <input
               type="email"
               placeholder="Username@gmail.com"
+            
               onChange={(e) => setSignInName(e.target.value)}
             />
 
             <input
               type="password"
               placeholder="Password"
+
               onChange={(e) => setSignInPassword(e.target.value)}
             />
 
@@ -75,19 +82,21 @@ function Login() {
       )}
 
       {showSignUp && (
-        <div className="modal-bog-bg">
-          <div className="modal-bog">
+        <div className="modal-bg">
+          <div className="modal-box">
             <h2>Sign Up</h2>
 
             <input
               type="email"
               placeholder="Choose Email"
+          
               onChange={(e) => setSignUpName(e.target.value)}
             />
 
             <input
               type="password"
               placeholder="Create Password"
+         
               onChange={(e) => setSignUpPassword(e.target.value)}
             />
 

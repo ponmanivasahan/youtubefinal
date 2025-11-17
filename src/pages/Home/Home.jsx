@@ -6,6 +6,7 @@ import { FaDesktop, FaCloudArrowDown } from "react-icons/fa6";
 import { HiArrowLeftStartOnRectangle } from "react-icons/hi2";
 import { BiSolidUserAccount } from "react-icons/bi";
 import Search from '../Search/Search';
+import { FaYoutube } from "react-icons/fa";
 import { useNavigate, useLocation } from 'react-router-dom';
 
 function Home() {
@@ -43,6 +44,7 @@ function Home() {
 
   return (
     <div>
+      <div className='Youtube'><p><FaYoutube />Youtube <sup>IN</sup></p></div>
       <div className="sidebar">
         <p><MdHome /> Home</p>
         <p onClick={() => navigate("/Shorts")}><SiYoutubeshorts /> Shorts</p>
